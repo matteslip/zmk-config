@@ -13,6 +13,16 @@
 #
 ---
 include:
+  - board: nice_nano@2.0.0//zmk
+    shield: mattesplit36_left
+    cmake-args: -DZMK_EXTRA_MODULES=${GITHUB_WORKSPACE}/keyboards/mattesplit36
+  - board: nice_nano@2.0.0//zmk
+    shield: mattesplit36_right
+    cmake-args: -DZMK_EXTRA_MODULES=${GITHUB_WORKSPACE}/keyboards/mattesplit36
+  - board: nice_nano@2.0.0//zmk
+    shield: mattesplit36_right_usb
+    artifact-name: mattesplit36_right_usb
+    cmake-args: -DZMK_EXTRA_MODULES=${GITHUB_WORKSPACE}/keyboards/mattesplit36
   - board: planck@6.0.0//zmk
   - board: corneish_zen_left@2.0.0//zmk
   - board: corneish_zen_right@2.0.0//zmk

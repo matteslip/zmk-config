@@ -23,6 +23,7 @@ _build_single $board $shield $snippet $artifact cmake_args *west_args:
     build_dir="{{ build / '$artifact' }}"
 
     echo "Building firmware for $artifact..."
+    export GITHUB_WORKSPACE="${GITHUB_WORKSPACE:-{{ justfile_directory() }}}"
     west build -s zmk/app -d "$build_dir" -b $board {{ west_args }} ${snippet:+-S "$snippet"} -- \
         -DZMK_CONFIG="{{ config }}" ${shield:+-DSHIELD="$shield"} {{ cmake_args }}
 

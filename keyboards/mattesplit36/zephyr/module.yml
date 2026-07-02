@@ -1,0 +1,4 @@
+name: zmk-keyboard-mattesplit36
+build:
+  settings:
+    board_root: .
