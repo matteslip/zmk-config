@@ -1,1 +1,28 @@
 #include "mattesplit36.dtsi"
+
+&kscan0 {
+    input-gpios =
+        /* left top row, physical left-to-right: P0.29 P0.02 P1.15 P1.13 P1.11 */
+        <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio0 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        /* left middle row, physical left-to-right: P1.00 P0.11 P1.04 P1.06 P0.10 */
+        <&gpio1 0  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio1 4  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio1 6  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        /* left bottom row, physical left-to-right: P0.17 P0.20 P0.22 P0.24 P0.09 */
+        <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio0 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio0 9  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        /* left thumbs: P1.02 P1.01 P1.07 */
+        <&gpio1 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio1 1  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+        <&gpio1 7  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    ;
+};
